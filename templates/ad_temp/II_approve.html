@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<title>Interior approve</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    	 <link rel="icon" type="image/x-icon" href="{% static 'ad_styles/house.ico' %}">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Interior Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="{% static 'ad_styles/adhome/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'ad_styles/adhome/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!-- font-awesome -->
+	<link href="{% static 'ad_styles/adhome/css/font-awesome.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'ad_styles/adhome/css/chocolat.css' %}" type="text/css" media="screen">
+	<link rel="stylesheet" href="{% static 'ad_styles/adhome/css/flexslider.css' %}" type="text/css" media="screen" property="" />
+	<!-- Flexslider-CSS -->
+	<!-- //Gallery Css -->
+	<!-- fonts -->
+	<link href="//fonts.googleapis.com/css?family=Great+Vibes&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&amp;subset=latin-ext,vietnamese"
+	    rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<style>
+
+
+.bt{
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                background-image: linear-gradient(to right,#e052a0,#f15c41);
+                cursor: pointer;
+                border-radius: 2px;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                height: 36px;
+                line-height: 36px;
+                padding: 0 10px;
+                font-size: 14px;
+
+                .bt:hover {
+                    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+                }
+ }
+	   table {
+  width: 1200px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+}
+table:hover{
+ box-shadow: 5px 10px 20px #B9D9EB ;
+}
+th,
+td {
+text-align: center;
+  padding: 15px;
+  background-color:white;
+  color: #fff;
+}
+
+th {
+
+  text-align: center;
+}
+
+
+  th {
+    background-color: #0CAFFF;
+  }
+
+
+
+  tr{
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  td {
+        color: black;
+    position: relative;
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+
+        z-index: -1;
+
+      }
+    }
+  }
+
+
+td:hover {
+  background-color:#B9D9EB;
+}
+	    body{
+    background-image: url("{% static 'ad_styles/adhome/images/3.jpg' %}");
+
+    }
+</style>
+<body style="height:800px;margin-top:-100px;">
+<script>
+	{% for msg in messages %}
+	alert('{{msg}}');
+	{% endfor %}
+</script>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+
+                    <div style="margin-top: 100px; border-width: 700px"  class="table">
+
+        <br>
+                        <button class="bt" style="margin-left:50px;"><a style="color:black; "  href="{% url 'adhome' %}">GO BACK</a></button>
+                        <table align="center" style="margin: 20px auto;">
+                            <center><b><p style="color: black;font-size: 25px;margin-top:180px" >STRUCTURAL INTEGRATION APPROVE</p></b></center>
+        <thead>
+            <tr>
+                <th style="text-align: center;">Name</th>
+                <th style="text-align: center;">Email</th>
+                <th style="text-align: center;">Phone</th>
+                <th style="text-align: center;">ID</th>
+                  <th style="text-align: center;">Proof of address</th>
+                <th style="text-align: center;">Action</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody style="text-align: center">
+            {% for item in d %}
+            <tr>
+                <td style="text-align: center;">{{item.name}}</td>
+                <td style="text-align: center;">{{item.email}}</td>
+                <td style="text-align: center;">{{item.phone}}</td>
+                <td style="text-align: center;">{{item.interiorid}}</td>
+                <td style="text-align: center;"><a href="{{item.poa.url}}" download>Proof Of Address(Download)</a></td>
+
+{% if item.appint is False %}
+                <td ><button class="bt"><a style="color:black" href="/approveint/{{item.id}}/">APPROVE</a></button> </td>
+{% endif %}
+                {% if item.appint is True %}
+                <td ><button class="bt"><a style="color:black" >APPROVED</a></button> </td>
+{% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    </div>
+
+</body>
+</html>

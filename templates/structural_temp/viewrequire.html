@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{% static 'ad_styles/house.ico' %}">
+    <title>view requirement</title>
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{% static 'structural_styles/Struct_home/css/style-starter.css' %}">
+</head>
+<style>
+    body{
+    background-image: url("{% static 'ad_styles/images/3.jpg' %}");
+
+    }
+</style>
+<style>
+
+
+.bt{
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                background-image: linear-gradient(to right,#e052a0,#f15c41);
+                cursor: pointer;
+                border-radius: 2px;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                height: 36px;
+                line-height: 36px;
+                padding: 0 10px;
+                font-size: 14px;
+
+                .bt:hover {
+                    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+                }
+ }
+	   table {
+  width: 1200px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+}
+table:hover{
+ box-shadow: 5px 10px 20px #B9D9EB ;
+}
+th,
+td {
+text-align: center;
+  padding: 15px;
+  background-color:white;
+  color: #fff;
+}
+
+th {
+
+  text-align: center;
+}
+
+
+  th {
+    background-color: #0CAFFF;
+  }
+
+
+
+  tr{
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  td {
+        color: black;
+    position: relative;
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+
+        z-index: -1;
+
+      }
+    }
+  }
+
+
+td:hover {
+  background-color:#B9D9EB;
+}
+</style>
+<body>
+<script>
+	{% for msg in messages %}
+	alert('{{msg}}');
+	{% endfor %}
+</script>
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                     Structural<span>-Integration</span>
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/viewrequirement/">View requirement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/processstruct/">Process Materials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/struclogout/">Logout</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+   <div class="banner-wrap">
+        <div class="banner-slider">
+            <!-- hero slide start -->
+            <div class="banner-slide bg1">
+                <div class="container">
+                    <div class="hero-content">
+
+                       <div style="margin-top: 100px; border-width: 700px"  class="table">
+                        <center><p style="color: white;font-size: 25px" >STRUCTURAL REQUIREMENTS</p></center>
+        <br>
+                        <table align="center" style="margin: 0px auto;">
+        <thead>
+            <tr>
+                <th>Client ID</th>
+                <th>Area</th>
+                  <th>Rooms Required</th>
+                  <th>Exterior wall 1 width</th>
+                  <th>Exterior wall 1 Height</th>
+				<th >Exterior wall 2 width</th>
+                <th > Exterior wall 2 Height</th>
+                <th>Exterior wall thickness</th>
+                <th>Interior wall thickness</th>
+                <th>Budget</th>
+                <th>Client Details</th>
+
+
+            </tr>
+        </thead>
+        <tbody style="text-align: center">
+            {% for item in d %}
+            <tr>
+                <td style=" text-align: justify;">{{item.clientid}}</td>
+                <td style=" text-align: justify;">{{item.square}}</td>
+                 <td style=" text-align: justify;">{{item.rooms}}</td>
+                 <td  style=" text-align: justify;">{{ item.wall1width }}</td>
+                 <td style=" text-align: justify;">{{ item.wall1height }}</td>
+                <td style=" text-align: justify;">{{ item.wall2width }}</td>
+                <td style=" text-align: justify;">{{ item.wall2height }}</td>
+                <td style=" text-align: justify;">{{ item.extthick }}</td>
+                <td style=" text-align: justify;">{{ item.intthick }}</td>
+                <td style=" text-align: justify;">{{ item.budget }}</td>
+
+                <td ><button class="bt"><a style="color:black" href="/viewclientdetails/{{item.id}}/">VIEW</a></button> </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    </div>
+                    </div>
+                </div>
+                <div class="hero-overlay"></div>
+            </div>
+</body>
+</html>

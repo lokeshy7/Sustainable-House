@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static  %}
+<!-- Head -->
+<head>
+<title>Process shelving</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="icon" type="image/x-icon" href="{% static 'ad_styles/house.ico' %}">
+<meta charset="utf-8">
+<meta name="keywords" content="Build Estate a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<!-- Default-JavaScript-File -->
+<script type="text/javascript" src="{% static 'interior_style/int_home/js/jquery-2.1.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'interior_style/int_home/js/bootstrap.js' %}"></script>
+<!-- //Default-JavaScript-File -->
+
+<link rel="stylesheet" href="{% static 'interior_style/int_home/css/mainStyles.css' %}" /><!-- for banner -->
+
+<link rel="stylesheet" href="{% static 'interior_style/int_home/css/flexslider.css' %}" type="text/css" media="screen" property="" /><!-- for testimonials -->
+
+<!-- Property for sale section css files-->
+<link rel="stylesheet" href="{% static 'interior_style/int_home/css/owl.carousel.css' %}" type="text/css" media="all">
+<link href="{% static 'interior_style/int_home/css/owl.theme.css' %}" rel="stylesheet">
+<!-- //Property for sale section css files -->
+
+<!-- for team section tabs -->
+<link href="{% static 'interior_style/int_home/css/easy-responsive-tabs.css' %}" rel='stylesheet' type='text/css'/>
+<!-- // for team section tabs -->
+
+<!-- default css files -->
+	<link rel="stylesheet" href="{% static 'interior_style/int_home/css/bootstrap.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" href="{% static 'interior_style/int_home/css/style.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" href="{% static 'interior_style/int_home/css/font-awesome.min.css' %}" />
+<!-- default css files -->
+
+<!--web font-->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
+<!--//web font-->
+
+<!-- scrolling script -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- //scrolling script -->
+
+<!-- Property for sale section Script-->
+<script>
+$(document).ready(function() {
+	$("#owl-demo").owlCarousel({
+
+		autoPlay: 3000, //Set AutoPlay to 3 seconds
+		autoPlay:true,
+		items : 3,
+		itemsDesktop : [640,5],
+		itemsDesktopSmall : [414,4]
+
+	});
+
+});
+</script>
+<!-- //Property for sale section Script-->
+
+</head>
+<style>
+	.ban{
+	background-image: url("{% static 'exterior_styles/exteriorhome/images/1.jpg' %}");
+	}
+</style>
+<style>
+
+
+.bt{
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                background-image: linear-gradient(to right,#e052a0,#f15c41);
+                cursor: pointer;
+                border-radius: 2px;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                height: 36px;
+                line-height: 36px;
+                padding: 0 10px;
+                font-size: 14px;
+
+                .bt:hover {
+                    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+                }
+ }
+	   table {
+  width: 900px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+text-align: center;
+  padding: 15px;
+  background-color:white;
+  color: #fff;
+}
+
+th {
+
+  text-align: center;
+}
+
+
+  th {
+    background-color: #55608f;
+  }
+
+
+
+  tr{
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  td {
+        color: black;
+    position: relative;
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+
+        z-index: -1;
+
+      }
+    }
+  }
+
+.slide{
+    background-image:
+    url("{% static 'customer/images/login-bg.jpg' %}");
+
+    background-repeat: no-repeat;
+}
+$fuschia: #ff0081;
+$button-bg: $fuschia;
+$button-text-color: #fff;
+$baby-blue: #f8faff;
+
+
+.bubbly-button{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $button-bg;
+  color: $button-text-color;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%),
+    radial-gradient(circle, $button-bg 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+
+  &:active{
+    transform: scale(0.9);
+    background-color: darken($button-bg, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+
+@keyframes topBubbles {
+  0%{
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
+ 100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0%{
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;}
+ 100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+}
+
+</style>
+<!-- Body -->
+<body>
+<script>
+	{% for msg in messages %}
+	alert('{{msg}}');
+	{% endfor %}
+</script>
+<!-- banner -->
+	<div class="banner" id="home">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header navbar-left">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<h1><a style="font-size: 24px;" class="navbar-brand" href="index.html"><span style="font-size: 24px; ">Interior&</span>Insulation</a></h1>
+					<i class="fa fa-home" aria-hidden="true"></i>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+				<nav class="link-effect-2" id="link-effect-2">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/int_home/" ><span data-hover="Home">Home</span></a></li>
+						<li><a href="/viewinsrequire/" class="" ><span data-hover="Requirement">Requirement</span></a></li>
+						<li><a href="/process_shelve/" class=""><span data-hover="Calc shelve">Calc shelve</span></a></li>
+						<li><a href="/process_flooring/" class=""><span data-hover="Calc Flooring">Calc Flooring</span></a></li>
+						<li><a href="/process_wallcover/" class=""><span data-hover="Calc Wallcover">Calc Wallcover</span></a></li>
+						<li><a href="/view_intresults/" class=""><span data-hover="Results">Results</span></a></li>
+
+						<li><a href="/int_logout/" ><span data-hover="Logout">Logout</span></a></li>
+					</ul>
+				</nav>
+			</div>
+					<div class="agileits-social top_content">
+
+					</div>
+		</nav>
+		</div>
+
+<div class="ban" id="exampleSlider" style="height:800px">
+
+
+	<div style=" border-width: 700px"  class="table">
+        <br><br><br> <br><br><br><br><br><br>
+                        <center><p style="color: white;font-size: 25px;" >SHELVING CALCULATION</p></center>
+        <br>
+                        <table align="center" style="margin-top: 40px;">
+        <thead>
+            <tr>
+                <th>CLIENTID</th>
+                <th>Calculate Shelve</th>
+
+
+            </tr>
+        </thead>
+        <tbody style="text-align: center">
+            {% for item in d %}
+            <tr>
+             <td style="text-align:center">{{item.clientid}}</td>
+				{% if item.calshelve is False %}
+				<form action="/calc_shelve/{{item.id}}/" method="POST">
+					{% csrf_token %}
+                <td ><input type="text" name="shelfheight" placeholder="Shelf height">&nbsp;&nbsp;
+					<input type="text" name="shelfwidth" placeholder="Shelf width">&nbsp;&nbsp;
+					<button class="bt" type="submit">PROCESS</button> </td>
+</form>
+				{% endif %}
+				{% if item.calshelve is True %}
+				<td>
+				<button class="bt" type="submit" style="color:white" disabled>PROCESSED</button> </td>
+				{% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    </div>
+</div>
+
+</body>
+</html>

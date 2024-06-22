@@ -1,0 +1,17 @@
+STRUCTURAL INTEGRATION CALCULATED REPORTS
+
+CEBS Wall 1: None kg
+Bamboo Wall 1: None g
+Hempcrete Wall 1: None g/cm³
+CEBS Wall 2: None meters
+Bamboo Wall 2: None meters
+Hempcrete Wall 2: None g/cm³
+CEBS Quantity Interior: None kg
+Bamboo Beams Interior: None g
+Hempcrete KG Interior: None g/cm³
+CEBS Quantity floor: 10252.61 kg
+Bamboo Beams floor: 137.51 g
+Hempcrete KG floor: 73997.91 g/cm³
+CEBS Quantity ceil: 10252.61 kg
+Bamboo Beams ceil: 137.51 g
+Hempcrete KG ceil: 73997.91 g/cm³

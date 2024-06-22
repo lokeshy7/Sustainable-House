@@ -1,0 +1,40 @@
+TOTAL CALCULATED REPORTS
+
+Structural Integration report
+CEBS Wall 1(per wall): 1779.98 kg
+Bamboo Wall 1(per wall): 67.03 g
+Hempcrete Wall 1(per wall): 22770.71 g/cm³
+CEBS Wall 2(per wall): 2378.06 meters
+Bamboo Wall 2(per wall): 52.39 meters
+Hempcrete Wall 2(per wall): 17698.77 g/cm³
+CEBS Quantity Interior(per wall): 8911.6 kg
+Bamboo Beams Interior(per wall): 160.0 g
+Hempcrete KG Interior(per wall): 64413.03 g/cm³
+CEBS Quantity floor: 9447.52 kg
+Bamboo Beams floor: 215.65 g
+Hempcrete KG floor: 76943.55 g/cm³
+CEBS Quantity ceil: 9447.52 kg
+Bamboo Beams ceil: 215.65 g
+Hempcrete KG ceil: 76943.55 g/cm³
+
+EXTERIOR ACQUISITION REPORTS
+
+Cork volume Wall 1(per wall): 0 m³
+Cork volume Wall 2(per wall): 0 m³
+Cork Size: 0.5 meters
+No. of Straw Wall 1(per wall): 556
+No. of Straw Wall 2(per wall): 0
+Bale Size: 2.5 x 1.5 x 3 meters
+
+INTERIOR AND INSULATION REPORTS
+
+Bamboo Height(per shelve): 56 meters
+Bamboo Width(per shelve): 112 meters
+Number Of Bamboo(per shelve): 2
+Wall Cover Area(1)(per wall): 206 square meters
+Wall Cover Area(2)(per wall): 206 square meters
+Interior Wall Cover Area(per wall): 206 square meters
+Wall Cover Cost(Exterior1)(per wall): 1500 cost unit
+Wall Cover Cost(Exterior2)(per wall): 1500 cost unit
+Wall Cover Cost(Interior)(per wall): 1500 cost unit
+Linolium Quantity(flooring): 2 quantity unit

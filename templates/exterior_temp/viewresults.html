@@ -1,0 +1,731 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<title>Process struct report</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Best Floor web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+<!-- css files -->
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/bootstrap.css' %}"> <!-- Bootstrap-Core-CSS -->
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/style.css' %}" type="text/css" media="all" /> <!-- Style-CSS -->
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/font-awesome.css' %}"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/owl.carousel.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/chocolat.css' %}" type="text/css" media="screen">
+<!-- //css files -->
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Ubuntu+Condensed&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<!-- //online-fonts -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+
+
+.bt{
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                background-image: linear-gradient(to right,#e052a0,#f15c41);
+                cursor: pointer;
+                border-radius: 2px;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                height: 36px;
+                line-height: 36px;
+                padding: 0 10px;
+                font-size: 11px;
+
+                .bt:hover {
+                    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+                }
+ }
+
+	    body{
+    background-image: url("{% static 'exterior_styles/exteriorhome/images/1.jpg' %}");
+
+    }
+	h1, h2 {
+  font-weight: 700;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 4em;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.form-overlay {
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0;
+  background: #000;
+  -webkit-transition: background 1s, opacity 0.4s, width 0s 0.4s;
+  transition: background 1s, opacity 0.4s, width 0s 0.4s;
+}
+
+.show-form-overlay .form-overlay {
+  width: 100%;
+  opacity: 0.7;
+  z-index: 999;
+  -webkit-transition: background 1s, opacity 0.4s, width 0s;
+  transition: background 1s, opacity 0.4s, width 0s;
+}
+.show-form-overlay.form-submitted .form-overlay {
+  background: #119DA4;
+  -webkit-transition: background 0.6s;
+  transition: background 0.6s;
+}
+
+#form-container {
+  cursor: pointer;
+  color: #FFF;
+  z-index: 1000;
+  position: absolute;
+  margin: 0 auto;
+  left: 950px;
+ top: 375px;
+  bottom: 5vh;
+  background-color: #f72f4e;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 60px;
+  max-width: 60px;
+  height: 60px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
+  transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
+}
+#form-container.expand {
+  cursor: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.17);
+  border-radius: 0;
+  width: 20%;
+  height: 330px;
+  max-width: 610px;
+  padding: 0;
+  -webkit-transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
+  transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
+}
+
+#form-close {
+  cursor: pointer;
+}
+
+.icon::before {
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 60px;
+  display: block;
+  -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon:hover::before {
+  -webkit-animation: wiggle 0.2s linear infinite;
+          animation: wiggle 0.2s linear infinite;
+}
+
+fa-envelope::before {
+  display: block;
+}
+
+.fa-close::before {
+  display: none;
+}
+
+.expandfa-envelope::before {
+  display: none;
+}
+
+.expand.fa-close::before {
+  display: block;
+  -webkit-animation: none;
+          animation: none;
+}
+
+#form-content {
+  font-family: Roboto, sans-serif;
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
+  width: 100%;
+  opacity: 0;
+  text-align: left;
+  -webkit-transition: opacity 0.2s 0.2s, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.2s 0.2s, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#form-content.expand {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition: opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transition: opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, opacity 0s;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+#form-content form {
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#form-head {
+  font-size: 100%;
+  padding: 0;
+  margin: 0 20px;
+  color: #FFF;
+  text-align: center;
+  -webkit-transition: all 0.8s 0.6s;
+  transition: all 0.8s 0.6s;
+}
+#form-head h1, #form-head p {
+  padding: 0;
+  margin: 0;
+}
+#form-head .pre {
+  display: block;
+}
+#form-head .post {
+  display: none;
+}
+
+.form-submitted#form-head {
+  -webkit-transform: translateY(250%);
+          transform: translateY(250%);
+}
+.form-submitted#form-head .pre {
+  display: none;
+}
+.form-submitted#form-head .post {
+  display: block;
+}
+
+.input {
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-width: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+::-webkit-input-placeholder {
+  /* Safari, Chrome and Opera */
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* Edge */
+::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* Default */
+:placeholder-shown {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+input, select, textarea {
+  color: #FFF;
+}
+
+.input.message {
+  resize: none;
+  height: 150px;
+  padding: 10px;
+}
+
+.input.submit {
+  background-color: #FFF;
+  color: #f72f4e;
+  font-size: 120%;
+  height: 50px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.1s, -webkit-transform 0s 0.6s;
+  transition: all 0.1s, -webkit-transform 0s 0.6s;
+  transition: all 0.1s, transform 0s 0.6s;
+  transition: all 0.1s, transform 0s 0.6s, -webkit-transform 0s 0.6s;
+}
+.input.submit:active {
+  margin-top: 15px;
+  box-shadow: 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.input.form-error {
+  -webkit-animation: error 0.8s ease;
+          animation: error 0.8s ease;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+select option {
+  background: #f72f4e;
+  color: #FFF;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+select option:disabled {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 90%;
+}
+
+.input {
+  -webkit-transition: -webkit-transform 0s 1s;
+  transition: -webkit-transform 0s 1s;
+  transition: transform 0s 1s;
+  transition: transform 0s 1s, -webkit-transform 0s 1s;
+}
+
+.form-submitted .input {
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  opacity: 0;
+  -webkit-transition: all 0.5s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: all 0.5s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: all 0.5s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: all 0.5s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.form-submitted .input:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.form-submitted .input:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.form-submitted .input:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.form-submitted .input:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.form-submitted .input:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+}
+
+@media (max-width:  400px) {
+  #form-container.expand {
+    height: 80%;
+    width: 100%;
+    max-width: 100%;
+    overflow: initial;
+    overflow-x: hidden;
+    bottom: 0;
+  }
+
+  h1 {
+    font-size: 300%;
+  }
+
+  .icon:hover::before {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .form-overlay {
+    display: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@-webkit-keyframes error {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+}
+@keyframes error {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+}
+@keyframes wiggle {
+  0%, 100% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+
+  width: 1100px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  th {
+    background-color: #55608f;
+  }
+}
+
+
+    table {
+  margin: 0;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  font-family: sans-serif;
+  font-weight: 100;
+}
+    td:hover{
+   background-color: #55608f;
+    }
+	.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+	.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #003298;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 12s ease-in forwards infinite;
+          animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: pink;
+}
+.cube:nth-child(2) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+</style>
+<body>
+<script>
+	{% for msg in messages %}
+	alert('{{msg}}');
+	{% endfor %}
+</script>
+<div class="header" id="header">
+
+	<nav class="navbar navbar-default">
+		<div class="navbar-header navbar-left">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+				<h3><a class="navbar-brand" href="index.html">Exterior<span>A</span>cquisition</a></h3>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+			<nav class="cl-effect-6" id="cl-effect-6">
+				<ul class="nav navbar-nav">
+				<li class="active"><a href="#home" class="scroll">Home</a></li>
+					<li><a href="/viewstructreport/" class="">View Report</a></li>
+					<li><a href="/processExtreport/" class=" ">Process Report</a></li>
+
+					<li><a href="/ext_logout/" >Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+	</nav>
+
+	<div class="clearfix"></div>
+</div>
+<div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+<div class="container" style="margin-top:250px;margin-left:10px;height:200px;">
+
+
+	<center><h4 style="color:white;font-size:29px;">EXTERIORWALL RESULTS</h4></center><br><br>
+  <table>
+    <thead>
+
+      <tr >
+        <th style="text-align:center;background-color:skyblue">ClientID</th>
+        <th style="text-align:center;background-color:skyblue">Cork volumn (wall1)</th>
+        <th style="text-align:center;background-color:skyblue">Cork volumn (wall2)</th>
+        <th style="text-align:center;background-color:skyblue">Cork Size</th>
+        <th style="text-align:center;background-color:skyblue">Number of Strawbale(wall1)</th>
+        <th style="text-align:center;background-color:skyblue">Number of Strawbale(wall2)</th>
+		  <th style="text-align:center;background-color:skyblue">Straw Bale size</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+		  <td style="text-align:center">{{d.clientid}}</td>
+        <td style="text-align:center">{{d.corkvolumn_extwall1}}</td>
+        <td style="text-align:center">{{d.corkvolumn_extwall2}}</td>
+        <td style="text-align:center">{{d.corksize}}</td>
+        <td style="text-align:center">{{d.noofstraw1}}</td>
+        <td style="text-align:center">{{d.noofstraw2}}</td>
+        <td style="text-align:center">{{d.balesize}}</td>
+
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+</html>

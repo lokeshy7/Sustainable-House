@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Upload requirement</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'ad_styles/house.ico' %}">
+</head>
+<style>
+    *,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FDF4F5;
+}
+
+.box {
+    position: relative;
+    width: 580px;
+    height: 1200px;
+    background: #AEDEFC;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    width: 380px;
+    height: 420px;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, transparent, #192655, #192655, #192655);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    width: 380px;
+    height: 420px;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, transparent, #192655, #192655, #192655);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.border-line {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.border-line::before {
+    width: 380px;
+    height: 420px;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, transparent, #005B41, #005B41, #005B41);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.border-line::after {
+    width: 380px;
+    height: 420px;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, transparent, #512B81, #512B81, #512B81);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box form {
+    background: #DAF5FF;
+    position: absolute;
+    inset: 4px;
+    padding: 0px 10px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.box form h2 {
+    color: #192655;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+.box form .input-box {
+    position: relative;
+    width: 500px;
+    margin-top: 35px;
+}
+
+.box form .input-box input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    color: #AEDEFC;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.box form .input-box span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #7286D3;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+}
+
+.box form .input-box input:valid~span,
+.box form .input-box input:focus~span {
+    color: #192655;
+    font-size: 0.75rem;
+    transform: translateY(-34px);
+}
+
+.box form .input-box i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #192655;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.box form .input-box input:valid ~ i,
+.box form .input-box input:focus ~ i {
+    height: 44px;
+}
+
+.box form .links {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box form .links a {
+    margin: 10px 0;
+    font-size: 0.75rem;
+    color: #7286D3;
+    text-decoration: none;
+}
+
+.box form .links a:hover,
+.box form .links a:nth-child(2) {
+    color: #192655;
+}
+
+.box form input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    color: #AEDEFC;
+    background: #192655;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    width: 100px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="submit"]:active {
+    opacity: 0.8;
+}
+
+@media (max-width: 400px) {
+    .box form {
+        padding: 50px 30px;
+    }
+}
+
+
+.bt{
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                background-image: linear-gradient(to right,#e052a0,#f15c41);
+                cursor: pointer;
+                border-radius: 2px;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 36px;
+                padding: 100 10px;
+                font-size: 14px;
+
+                .bt:hover {
+                    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+                }
+ }
+</style>
+<body  style="background-image: url('{% static 'ad_styles/adhome/images/4.jpg' %}');">
+<script>
+	{% for msg in messages %}
+	alert('{{msg}}');
+	{% endfor %}
+</script>
+
+<a href="/client_home/"><button class="bt" style="margin-top:20;">GO BACK</button></a>
+
+   <main class="box">
+        <span class="border-line"></span>
+        <form action="/uploadstructdetails/" method="POST">
+            {% csrf_token %}
+            <h2>Upload Requirements</h2>
+            <div class="input-box">
+                <input name="square" type="text" required="required">
+                <span>Total square feet</span>
+                <i></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="rooms" required="required">
+                <span>Rooms Required</span>
+                <i></i>
+            </div>
+             <div class="input-box">
+                <input type="text" name="wall1width" required="required">
+                <span>Exterior wall 1 width(cm)</span>
+                <i></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="wall1height" required="required">
+                <span>Exterior wall 1 height(cm)</span>
+                <i></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="wall2width" required="required">
+                <span>Exterior wall 2 width(cm)</span>
+                <i></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="wall2height" required="required">
+                <span>Exterior wall 2 height(cm)</span>
+                <i></i>
+            </div>
+             <div class="input-box">
+                <input type="text" name="extthick" required="required">
+                <span>Exterior wall thickness(mm)</span>
+                <i></i>
+            </div>
+                <div class="input-box">
+                <input type="text" name="intthick" required="required">
+                <span>Interior wall thickness(mm)</span>
+                <i></i>
+            </div>
+                <div class="input-box">
+                <input type="text" name="roomwidth" required="required">
+                <span>Width per room(cm)</span>
+                <i></i>
+            </div>
+              <div class="input-box">
+                <input type="text" name="floorlen" required="required">
+                <span>Floor lenght(cm)</span>
+                <i></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="floorwid" required="required">
+                <span>Floor Width(cm)</span>
+                <i></i>
+            </div>
+                  <div class="input-box">
+                <input type="text" name="noofshelve" required="required">
+                <span>Number of shelves</span>
+                <i></i>
+ </div>
+            <div class="input-box">
+                <input type="text" name="budget" required="required">
+                <span>Total Budget</span>
+                <i></i>
+            </div>
+            <div class="links">
+
+
+            </div>
+            <center><input type="submit" value="UPLOAD"></center><br><br>
+
+
+        </form>
+
+    </main>
+</body>
+</html>

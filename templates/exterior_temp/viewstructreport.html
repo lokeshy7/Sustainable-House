@@ -1,0 +1,625 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<title>View report</title>
+    	 <link rel="icon" type="image/x-icon" href="{% static 'ad_styles/house.ico' %}">
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Best Floor web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+<!-- css files -->
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/bootstrap.css' %}"> <!-- Bootstrap-Core-CSS -->
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/style.css' %}" type="text/css" media="all" /> <!-- Style-CSS -->
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/font-awesome.css' %}"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/owl.carousel.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'exterior_styles/exteriorhome/css/chocolat.css' %}" type="text/css" media="screen">
+<!-- //css files -->
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Ubuntu+Condensed&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<!-- //online-fonts -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+
+
+.bt{
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                background-image: linear-gradient(to right,#e052a0,#f15c41);
+                cursor: pointer;
+                border-radius: 2px;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                height: 36px;
+                line-height: 36px;
+                padding: 0 10px;
+                font-size: 14px;
+
+                .bt:hover {
+                    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+                }
+ }
+	   table {
+  width: 850px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+}
+table:hover{
+ box-shadow: 5px 10px 20px #B9D9EB ;
+}
+th,
+td {
+height:50px;
+text-align: center;
+  padding: 15px;
+  background-color:white;
+  color: #fff;
+}
+
+th {
+
+  text-align: center;
+}
+
+
+  th {
+    background-color: #0CAFFF;
+  }
+
+
+
+  tr{
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  td {
+        color: black;
+    position: relative;
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+
+        z-index: -1;
+
+      }
+    }
+  }
+
+
+td:hover {
+  background-color:#B9D9EB;
+}
+	    body{
+    background-image: url("{% static 'ad_styles/adhome/images/4.jpg' %}");
+
+    }
+	h1, h2 {
+  font-weight: 700;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 4em;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.form-overlay {
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0;
+  background: #000;
+  -webkit-transition: background 1s, opacity 0.4s, width 0s 0.4s;
+  transition: background 1s, opacity 0.4s, width 0s 0.4s;
+}
+
+.show-form-overlay .form-overlay {
+  width: 100%;
+  opacity: 0.7;
+  z-index: 999;
+  -webkit-transition: background 1s, opacity 0.4s, width 0s;
+  transition: background 1s, opacity 0.4s, width 0s;
+}
+.show-form-overlay.form-submitted .form-overlay {
+  background: #119DA4;
+  -webkit-transition: background 0.6s;
+  transition: background 0.6s;
+}
+
+#form-container {
+  cursor: pointer;
+  color: #FFF;
+  z-index: 1000;
+  position: absolute;
+  margin: 0 auto;
+  left: 950px;
+ top: 375px;
+  bottom: 5vh;
+  background-color: #f72f4e;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 60px;
+  max-width: 60px;
+  height: 60px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
+  transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
+}
+#form-container.expand {
+  cursor: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.17);
+  border-radius: 0;
+  width: 20%;
+  height: 330px;
+  max-width: 610px;
+  padding: 0;
+  -webkit-transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
+  transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
+}
+
+#form-close {
+  cursor: pointer;
+}
+
+.icon::before {
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 60px;
+  display: block;
+  -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon:hover::before {
+  -webkit-animation: wiggle 0.2s linear infinite;
+          animation: wiggle 0.2s linear infinite;
+}
+
+fa-envelope::before {
+  display: block;
+}
+
+.fa-close::before {
+  display: none;
+}
+
+.expandfa-envelope::before {
+  display: none;
+}
+
+.expand.fa-close::before {
+  display: block;
+  -webkit-animation: none;
+          animation: none;
+}
+
+#form-content {
+  font-family: Roboto, sans-serif;
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
+  width: 100%;
+  opacity: 0;
+  text-align: left;
+  -webkit-transition: opacity 0.2s 0.2s, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.2s 0.2s, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#form-content.expand {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition: opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transition: opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, opacity 0s;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+#form-content form {
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#form-head {
+  font-size: 100%;
+  padding: 0;
+  margin: 0 20px;
+  color: #FFF;
+  text-align: center;
+  -webkit-transition: all 0.8s 0.6s;
+  transition: all 0.8s 0.6s;
+}
+#form-head h1, #form-head p {
+  padding: 0;
+  margin: 0;
+}
+#form-head .pre {
+  display: block;
+}
+#form-head .post {
+  display: none;
+}
+
+.form-submitted#form-head {
+  -webkit-transform: translateY(250%);
+          transform: translateY(250%);
+}
+.form-submitted#form-head .pre {
+  display: none;
+}
+.form-submitted#form-head .post {
+  display: block;
+}
+
+.input {
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-width: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+::-webkit-input-placeholder {
+  /* Safari, Chrome and Opera */
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* Edge */
+::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+}
+
+/* Default */
+:placeholder-shown {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+input, select, textarea {
+  color: #FFF;
+}
+
+.input.message {
+  resize: none;
+  height: 150px;
+  padding: 10px;
+}
+
+.input.submit {
+  background-color: #FFF;
+  color: #f72f4e;
+  font-size: 120%;
+  height: 50px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.1s, -webkit-transform 0s 0.6s;
+  transition: all 0.1s, -webkit-transform 0s 0.6s;
+  transition: all 0.1s, transform 0s 0.6s;
+  transition: all 0.1s, transform 0s 0.6s, -webkit-transform 0s 0.6s;
+}
+.input.submit:active {
+  margin-top: 15px;
+  box-shadow: 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.input.form-error {
+  -webkit-animation: error 0.8s ease;
+          animation: error 0.8s ease;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+select option {
+  background: #f72f4e;
+  color: #FFF;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+select option:disabled {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 90%;
+}
+
+.input {
+  -webkit-transition: -webkit-transform 0s 1s;
+  transition: -webkit-transform 0s 1s;
+  transition: transform 0s 1s;
+  transition: transform 0s 1s, -webkit-transform 0s 1s;
+}
+
+.form-submitted .input {
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  opacity: 0;
+  -webkit-transition: all 0.5s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: all 0.5s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: all 0.5s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: all 0.5s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.form-submitted .input:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.form-submitted .input:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.form-submitted .input:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.form-submitted .input:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.form-submitted .input:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+}
+
+@media (max-width:  400px) {
+  #form-container.expand {
+    height: 80%;
+    width: 100%;
+    max-width: 100%;
+    overflow: initial;
+    overflow-x: hidden;
+    bottom: 0;
+  }
+
+  h1 {
+    font-size: 300%;
+  }
+
+  .icon:hover::before {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .form-overlay {
+    display: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@-webkit-keyframes error {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+}
+@keyframes error {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+}
+@keyframes wiggle {
+  0%, 100% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+
+</style>
+<body>
+<script>
+	{% for msg in messages %}
+	alert('{{msg}}');
+	{% endfor %}
+</script>
+<div class="header" id="header">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header navbar-left">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<h3><a class="navbar-brand" href="index.html">Exterior<span>A</span>cquisition</a></h3>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+			<nav class="cl-effect-6" id="cl-effect-6">
+				<ul class="nav navbar-nav">
+					<li ><a href="/exterior_home/" class="">Home</a></li>
+					<li class="active" ><a href="/viewstructreport/" class="">View Report</a></li>
+					<li ><a href="/processExtreport/" class=" ">Process Report</a></li>
+
+					<li><a href="/ext_logout/" >Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+	</nav>
+
+	<div class="clearfix"></div>
+</div>
+<div class="main-agile" style="margin-top: 150px;margin-left:1px;" >
+
+ <div  class="table">
+
+        <br>
+                        <table align="center" style="margin-left: 300px;height:150px">
+             <b><p style="color: white;font-size: 30px;margin-top:-40px;margin-left:470px" >STRUCTURAL INTEGRATION REPORT</p></b></center>
+        <thead>
+            <tr style="text-align: center">
+                <th style="text-align: center;">Client ID</th>
+                <th style="text-align: center">Report </th>
+
+            </tr>
+        </thead>
+        <tbody style="text-align: center">
+            {% for item in d %}
+            <tr style="text-align: center">
+                <td style="text-align: center;">{{item.clientid}}</td>
+                <td style="text-align: center"><a href=" {{item.report.url}}" download>Report   &nbsp;&nbsp;&nbsp;(click to download)</a></td>
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="function.js"></script>
+
+
+
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    </div>
+</div>
+<script>
+
+
+var formContainer = $('#form-container');
+
+bindFormClick();
+//Opening the form
+function bindFormClick(){
+  $(formContainer).on('click', function(e) {
+    e.preventDefault();
+    toggleForm();
+    //Ensure container doesn't togleForm when open
+    $(this).off();
+  });
+}
+
+//Closing the form
+$('#form-close, .form-overlay').click(function(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  toggleForm();
+  bindFormClick();
+});
+
+function toggleForm(){
+  $(formContainer).toggleClass('expand');
+  $(formContainer).children().toggleClass('expand');
+  $('body').toggleClass('show-form-overlay');
+  $('.form-submitted').removeClass('form-submitted');
+}
+
+//Form validation
+$('form').submit(function() {
+  var form = $(this);
+  form.find('.form-error').removeClass('form-error');
+  var formError = false;
+
+  form.find('.input').each(function() {
+    if ($(this).val() == '') {
+      $(this).addClass('form-error');
+      $(this).select();
+      formError = true;
+      return false;
+    }
+    else if ($(this).hasClass('email') && !isValidEmail($(this).val())) {
+      $(this).addClass('form-error');
+      $(this).select();
+      formError = true;
+      return false;
+    }
+  });
+
+  if (!formError) {
+    $('body').addClass('form-submitted');
+    $('#form-head').addClass('form-submitted');
+    setTimeout(function(){
+      $(form).trigger("reset");
+    }, 1000);
+  }
+  return false;
+});
+
+function isValidEmail(email) {
+    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+    return pattern.test(email);
+};
+</script>
+</body>
+</html>
